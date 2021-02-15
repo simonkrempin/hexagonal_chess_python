@@ -1,7 +1,7 @@
 import pygame
 import math
 # import random
-import pieces
+import Pieces
 
 
 class Hexagon:
@@ -99,42 +99,42 @@ class GameBoard:
         # black pieces
         # bishops
         for i in range(3):
-            self.fields[i][5].piece = pieces.Bishop(self.fields[i][5], screen, False)
+            self.fields[i][5].piece = Pieces.Bishop(self.fields[i][5], screen, False)
         # queen
-        self.fields[0][4].piece = pieces.Queen(self.fields[0][4], screen, False)
+        self.fields[0][4].piece = Pieces.Queen(self.fields[0][4], screen, False)
         # king
-        self.fields[1][6].piece = pieces.King(self.fields[1][6], screen, False)
+        self.fields[1][6].piece = Pieces.King(self.fields[1][6], screen, False)
         # knights
-        self.fields[0][3].piece = pieces.Knight(self.fields[0][3], screen, False)
-        self.fields[2][7].piece = pieces.Knight(self.fields[2][7], screen, False)
+        self.fields[0][3].piece = Pieces.Knight(self.fields[0][3], screen, False)
+        self.fields[2][7].piece = Pieces.Knight(self.fields[2][7], screen, False)
         # rooks
-        self.fields[0][2].piece = pieces.Rook(self.fields[0][2], screen, False)
-        self.fields[3][8].piece = pieces.Rook(self.fields[3][8], screen, False)
+        self.fields[0][2].piece = Pieces.Rook(self.fields[0][2], screen, False)
+        self.fields[3][8].piece = Pieces.Rook(self.fields[3][8], screen, False)
         # pawns
         for i in range(5):
-            self.fields[0 + i][1 + i].piece = pieces.Pawn(self.fields[0 + i][1 + i], screen, False)
+            self.fields[0 + i][1 + i].piece = Pieces.Pawn(self.fields[0 + i][1 + i], screen, False)
         for i in range(4):
-            self.fields[4][6 + i].piece = pieces.Pawn(self.fields[4][6 + i], screen, False)
+            self.fields[4][6 + i].piece = Pieces.Pawn(self.fields[4][6 + i], screen, False)
 
         # white pieces
         # bishops
         for i in range(3):
-            self.fields[10-i][5].piece = pieces.Bishop(self.fields[10-i][5], screen, True)
+            self.fields[10-i][5].piece = Pieces.Bishop(self.fields[10-i][5], screen, True)
         # queen
-        self.fields[9][4].piece = pieces.Queen(self.fields[9][4], screen, True)
+        self.fields[9][4].piece = Pieces.Queen(self.fields[9][4], screen, True)
         # king
-        self.fields[10][6].piece = pieces.King(self.fields[10][6], screen, True)
+        self.fields[10][6].piece = Pieces.King(self.fields[10][6], screen, True)
         # knights
-        self.fields[8][3].piece = pieces.Knight(self.fields[8][3], screen, True)
-        self.fields[10][7].piece = pieces.Knight(self.fields[10][7], screen, True)
+        self.fields[8][3].piece = Pieces.Knight(self.fields[8][3], screen, True)
+        self.fields[10][7].piece = Pieces.Knight(self.fields[10][7], screen, True)
         # rooks
-        self.fields[7][2].piece = pieces.Rook(self.fields[7][2], screen, True)
-        self.fields[10][8].piece = pieces.Rook(self.fields[10][8], screen, True)
+        self.fields[7][2].piece = Pieces.Rook(self.fields[7][2], screen, True)
+        self.fields[10][8].piece = Pieces.Rook(self.fields[10][8], screen, True)
         # pawns
         for i in range(5):
-            self.fields[6][1+i].piece = pieces.Pawn(self.fields[6][1+i], screen, True)
+            self.fields[6][1+i].piece = Pieces.Pawn(self.fields[6][1+i], screen, True)
         for i in range(4):
-            self.fields[7+i][6+i].piece = pieces.Pawn(self.fields[7+i][6+i], screen, True)
+            self.fields[7+i][6+i].piece = Pieces.Pawn(self.fields[7+i][6+i], screen, True)
 
         # assign changer value to edge pieces
         # black side of pieces / white level up side
